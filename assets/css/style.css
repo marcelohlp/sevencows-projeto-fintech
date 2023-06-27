@@ -1,0 +1,245 @@
+@import url(./table.css);
+@import url(./modal.css);
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    --primary-green: #7AAD71;
+    --secondary-green: #b7dab2;
+    --primary-red: #b42828;
+    --white: #FFFFFF;
+    --primary-gray: #f1f1f1;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    width: 90%;
+}
+
+/* header */
+.navbar {
+    background-color: var(--primary-gray);
+}
+
+/* header - menu */
+.nav-link, .dropdown-item {
+    color: var(--primary-green);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.line {
+    color: var(--primary-green);
+}
+
+/* section - banner */
+
+.banner {
+    background-color: var(--primary-green);
+    padding: 0.5rem;
+    color: var(--white);
+}
+
+.banner-user {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.banner-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* banner choose month */
+
+.choose-month {
+    margin: 1rem;
+}
+
+.choose-month-text, .choose-month-input {
+    font-size: 1rem;
+}
+
+.choose-month-input {
+    font-weight: 600;
+    background-color: var(--secondary-green);
+    border: none;
+    border-radius: 10px;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--primary-green);
+    padding: 1rem;
+    color: var(--white);
+    font-size: 0.8rem;
+}
+
+.icon {
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+/* Button */
+
+.button {
+    background-color: var(--primary-green);
+    color: var(--white);
+    margin: 1rem auto 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--primary-green);
+    border: 1px solid var(--primary-green);
+}
+
+.button-red {
+    background-color: var(--primary-red);
+}
+
+.button-red:hover {
+    background-color: transparent;
+    color: var(--primary-red);
+    border: 1px solid var(--primary-red);
+}
+
+
+/* Display None */
+
+.none {
+    display: none;
+}
+
+
+/* Media Query */
+
+
+@Media (min-width: 768px) {
+
+    .banner {
+        padding: 1rem;
+    }
+
+    /* banner choose month */
+
+    .choose-month-text, .choose-month-input {
+        font-size: 1.5rem;
+    }
+
+    /* Font */
+
+    .banner-user {
+        font-size: 2rem;
+    }
+    
+    .banner-text {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+
+    /* None */
+
+    .none {
+        display: table-cell;
+    }
+
+    .width-25 {
+        width: 25%;
+    }
+}
+
+@Media (min-width: 992px) {
+
+    /* Font */
+
+    .banner-user {
+        font-size: 2.5rem;
+    }
+    
+    .banner-text {
+        font-size: 1.8rem;
+    }
+
+    .footer {
+        font-size: 1.1rem;
+    }
+
+    .icon {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .banner {
+        padding: 2rem;
+    }
+
+    /* Font */
+
+    .nav-link, .dropdown-item {
+        font-size: 1.3rem;
+    }
+
+    .banner-user {
+        font-size: 3.5rem;
+    }
+    
+    .banner-text {
+        font-size: 2.5rem;
+    }
+    
+    .footer {
+        font-size: 1.3rem;
+    }
+
+    .icon {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (min-width: 1400px) {
+
+    /* Font */
+
+    .nav-link, .dropdown-item {
+        font-size: 1.5rem;
+    }
+
+    .banner-user {
+        font-size: 4rem;
+    }
+    
+    .banner-text {
+        font-size: 3rem;
+    }
+
+    .choose-month-text {
+        font-size: 2rem;
+    }
+
+    .button {
+        font-size: 1.5rem;
+    }
+    
+    .footer {
+        font-size: 1.5rem;
+    }
+
+    .icon {
+        font-size: 3rem;
+    }
+}

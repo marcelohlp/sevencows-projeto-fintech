@@ -1,0 +1,356 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Despesas | SevenCows</title>
+
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+    
+    <body>
+        
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid menu">
+                    <a class="navbar-brand" href="../../index.html">
+                        <img src="../images/logotipo.svg" alt="Logotipo SevenCows" class="logotipo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+                            </li>
+                            <li><hr class="line"></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Receitas</a>
+                            </li>
+                            <li><hr class="line"></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/despesas.html">Despesas</a>
+                            </li>
+                            <li><hr class="line"></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Investimentos</a>
+                            </li>
+                            <li><hr class="line"></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Minhas Informações
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item disabled" href="#" disable>Objetivos</a></li>
+                                    <li><hr class="line"></li>
+                                    <li><a class="dropdown-item disabled" href="#">Perfil</a></li>
+                                    <li><hr class="line"></li>
+                                    <li><a class="dropdown-item disabled" href="#">Configurações</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section class="banner d-flex flex-column">
+            <p class="banner-user"><span class="user" id="user">Usuário</span></p>
+            <p class="banner-text align-self-center">Suas despesas de <span class="month" id="month">Abril</span> de <span class="year" id="year">2023</span>!</p>
+            <div class="choose-month d-flex flex-column align-items-center">
+                <h2 class="choose-month-text">Você pode escolher outro mês!</h2>
+                <form action="#" name="select-date" id="select-date" method="post" class="d-flex flex-column">
+                    <input type="month" class="choose-month-input" id="choose-month-input" name="choose-month-input">
+                </form>
+            </div>
+            
+        </section>
+
+        <main class="container row table-content">
+ 
+            <!-- Relatório despesas -->
+            <section class="col-lg-10 table-box d-flex flex-column">
+                <h2 class="table-title">Minhas despesas</h2>
+                <div class="d-flex flex-column flex-sm-row justify-content-sm-around">
+                    <div class="flex-column">
+                        <div class="d-flex flex-column justify-content-center align-items-center mb-3">
+                            <p class="table-text">Dispesas Fixas</p>
+                            <p class="table-value">R$ 1.650,00</p>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center align-items-center mb-3">
+                            <p class="table-text">Depesas variáveis</p>
+                            <p class="table-value">R$ 1.150,00</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="../images/grafico.svg" alt="Gráfico para rentabilidade investimentos" class="graphic">
+                        <p class="table-footnote">Evolução despesas 12 meses</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Despesas fixas -->
+            <section class="col-lg-10 table-box d-flex flex-column">
+                <h2 class="table-title">Despesas fixas</h2>
+                <table class="table-center mx-lg-5 justify-content-center">
+                    <thead>
+                        <tr class="table-line table-emphasis text-md-center">
+                            <th class="table-text none width-25">Dia</th>
+                            <th class="table-text text-start text-md-center">Despesa</th>
+                            <th class="table-text text-end text-md-center width-25">Valor (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-line text-md-center" >
+                            <td class="table-value none">05</td>
+                            <td class="table-text text-start text-md-center">Faculdade</td>
+                            <td class="table-value text-end text-md-center">1.150,00</td>
+                        </tr>
+                        <tr class="table-line text-md-center" >
+                            <td class="table-value none ">15</td>
+                            <td class="table-text text-start text-md-center">Internet</td>
+                            <td class="table-value text-end text-md-center">100,00</td>
+                        </tr>
+                        <tr class="table-line text-md-center" >
+                            <td class="table-value none">15</td>
+                            <td class="table-text text-start text-md-center">Streaming</td>
+                            <td class="table-value text-end text-md-center">50,00</td>
+                        </tr>
+                        <tr class="table-line text-md-center" >
+                            <td class="table-value none">20</td>
+                            <td class="table-text text-start text-md-center">Parcela celular</td>
+                            <td class="table-value text-end text-md-center">200,00</td>
+                        </tr>
+                        <tr class="table-line text-md-center" >
+                            <td class="table-value none">22</td>
+                            <td class="table-text text-start text-md-center">Curso francês</td>
+                            <td class="table-value text-end text-md-center">150,00</td>
+                        </tr>
+                        <tr class="table-line table-emphasis text-md-center">
+                            <td class="table-text none">Abril</td>
+                            <td class="table-text text-start text-md-center">Total</td>
+                            <td class="table-value text-end text-md-center" >1.650,00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="table-footnote" colspan="3">Valores referentes ao mês atual</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <!-- Botões -->
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-between">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn button" data-bs-toggle="modal" data-bs-target="#novaDespesaFixa">
+                        <p>Nova Despesa</p>
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="novaDespesaFixa" tabindex="-1" aria-labelledby="labelNovaDespesaFixa" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 form-title" id="labelNovaDespesaFixa">Nova despesa fixa</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex flex-column align-items-center">
+                                    <form action="#" name="formNovaFixa" id="formNovaFixa" method="post" class="d-flex flex-column">
+                                        <label for="campoNovaFixa" class="form-text" >Despesa</label>
+                                        <input type="text" id="campoNovaFixa" name="campoNovaFixa" maxlength="30" placeholder="Digite sua despesa">
+                                        <label for="valorNovaFixa" class="form-text">Valor</label>
+                                        <input type="number" id="valorNovaFixa" name="valorNovaFixa" min="0" step="0.01" placeholder="Ex: 0,00">
+                                        <label for="diaNovaFixa" class="form-text">Dia</label>
+                                        <input type="number" id="diaNovaFixa" name="diaNovaFixa" min="1" max="31" placeholder="Digite o dia">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn button button-red" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn button">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn button button-red" data-bs-toggle="modal" data-bs-target="#excluirDepesaFixa">
+                        <p>Excluir Despesa</p>
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="excluirDepesaFixa" tabindex="-1" aria-labelledby="modalExcluirDespesaFixa" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 form-title" id="modalExcluirDespesaFixa">Excluir despesa fixa</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex flex-column align-items-center">
+                                    <form action="#" name="excluirFixa" id="excluirFixa" method="post" class="d-flex flex-column"></form>
+                                        <label for="selecaoFixa" class="form-text">Selecione ou digite uma despesa</label>
+                                        <input list="listaExcluirDepesaFixa" id="selecaoFixa" name="selecaoFisica" placeholder="Escolha uma despesa">
+                                            <datalist id="listaExcluirDepesaFixa">
+                                                <option value="Faculdade">
+                                                <option value="Internet">
+                                                <option value="Streaming">
+                                                <option value="Parcela celular">
+                                                <option value="Curso francês">
+                                            </datalist>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn button button-red" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn button">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Despesas variáveis -->
+            <section class="col-lg-10 table-box d-flex flex-column">
+                <h2 class="table-title">Despesas Variáveis</h2>
+                <table class="table-center mx-lg-5">
+                    <thead>
+                        <tr class="table-line table-emphasis text-md-center">
+                            <th class="table-text none width-25">Data</th>
+                            <th class="table-text text-start text-md-center">Despesa</th>
+                            <th class="table-text text-end text-md-center width-25">Valor (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-line text-md-center" >
+                            <td class="table-value none">10</td>
+                            <td class="table-text text-start text-md-center">Mercado</td>
+                            <td class="table-value text-end text-md-center">800,00</td>
+                        </tr>
+                        <tr class="table-line text-md-center" >
+                            <td class="table-value none">11</td>
+                            <td class="table-text text-start text-md-center">Cinema</td>
+                            <td class="table-value text-end text-md-center">50,00</td>
+                        </tr>
+                        <tr class="table-line text-md-center" >
+                            <td class="table-value none">15</td>
+                            <td class="table-text text-start text-md-center">Restaurante</td>
+                            <td class="table-value text-end text-md-center">180,00</td>
+                        </tr>
+                        <tr class="table-line text-md-center" >
+                            <td class="table-value none">16</td>
+                            <td class="table-text text-start text-md-center">Troca de óleo</td>
+                            <td class="table-value text-end text-md-center">120,00</td>
+                        </tr>
+                        <tr class="table-line table-emphasis text-md-center">
+                            <td class="table-text none">Abril</td>
+                            <td class="table-text text-start text-md-center">Total</td>
+                            <td class="table-value text-end text-md-center ">1.150,00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="table-footnote" colspan="3">Valores referentes ao mês atual</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            
+
+                <!-- Botões -->
+                <div class="d-flex flex-column flex-sm-row justify-content-between align-items-between">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn button" data-bs-toggle="modal" data-bs-target="#novaDespesaVariavel">
+                        <p>Nova Despesa</p>
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="novaDespesaVariavel" tabindex="-1" aria-labelledby="modalNovaDespesaVariavel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 form-title" id="modalNovaDespesaVariavel">Nova despesa variavel</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex flex-column align-items-center">
+                                    <form action="#" name="formNovaVariavel" id="formNovaVariavel" method="post" class="d-flex flex-column">
+                                        <label for="campoNovaVariavel" class="form-text">Despesa</label>
+                                        <input type="text" id="campoNovaVariavel" name="campoNovaVariavel" maxlength="30" placeholder="Digite sua despesa">
+                                        <label for="valorNovaVariavel" class="form-text">Valor</label>
+                                        <input type="number" id="valorNovaVariavel" name="valorNovaVariavel" min="0" step="0.01" placeholder="Ex: 0,00">
+                                        <label for="diaNovaVariavel" class="form-text">Dia</label>
+                                        <input type="number" id="diaNovaVariavel" name="diaNovaVariavel" min="1" max="31" placeholder="Digite o dia">
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn button button-red" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn button">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn button button-red" data-bs-toggle="modal" data-bs-target="#excluirDepesaVariavel">
+                        <p>Excluir Despesa</p>
+                    </button>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="excluirDepesaVariavel" tabindex="-1" aria-labelledby="modalExcluirDespesaVariave" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 form-title" id="modalExcluirDespesaVariave">Excluir despesa variavel</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex flex-column align-items-center">
+                                    <form action="#" name="excluirVariavel" id="excluirVariavel" method="post" class="d-flex flex-column"></form>
+                                        <label for="selecaoVariavel" class="form-text">Selecione ou digite uma despesa</label>
+                                        <input list="listaExcluirDepesaVariavel" id="selecaoVariavel" name="selecaoVariavel" placeholder="Escolha uma despesa">
+                                            <datalist id="listaExcluirDepesaVariavel">
+                                                <option value="Mercado">
+                                                <option value="Cinema">
+                                                <option value="Restaurante">
+                                                <option value="Troca de óleo">
+                                            </datalist>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn button button-red" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn button">Salvar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer d-flex flex-column align-items-center">
+            <nav>
+                <a href="#"><i class="icon fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="icon fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="icon fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="icon fa-brands fa-linkedin"></i></a>
+            </nav>
+            <p>Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>

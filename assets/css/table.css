@@ -1,0 +1,152 @@
+
+.table-content {
+    margin: 1rem auto;
+    justify-content: center;
+}
+
+.table-box {
+    background-color: var(--primary-gray);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+
+/* Table */
+
+.table-emphasis {
+    background-color: var(--secondary-green);
+}
+
+.table-line{
+    border-bottom: 1px solid var(--primary-green);
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.table-line:hover {
+    background-color: var(--primary-green);
+    color: var(--white);
+    transition: 0.2s;
+}
+
+
+/* Font */
+
+.table-title {
+    color: var(--primary-green);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem
+}
+
+.table-text {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.table-value {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.table-footnote {
+    margin-top: 0.2rem 0 0;
+    font-size: 0.8rem;
+}
+
+
+/* Media Query */
+
+
+@Media (min-width: 768px) {
+
+    .table-break {
+        margin: 0 2rem;
+    }
+
+    .table-box {
+        align-content: center;
+    }
+}
+
+@Media (min-width: 992px) {
+
+    .table-break {
+        margin: 0;
+    }
+
+    .table-center {
+        margin: auto 0;
+    }
+
+    /* Font */
+
+    .table-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem
+    }
+    
+    .table-text {
+        font-size: 1.2rem;
+    }
+    
+    .table-value {
+        font-size: 1.2rem;
+    }
+    
+    .table-footnote {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    /* Font */
+
+    .table-title {
+        font-size: 2rem;
+        margin-bottom: 2rem
+    }
+    
+    .table-text {
+        font-size: 1.4rem;
+    }
+    
+    .table-value {
+        font-size: 1.4rem;
+    }
+    
+    .table-footnote {
+        font-size: 1rem;
+    }
+
+}
+
+@media (min-width: 1400px) {
+
+    .table-box {
+        padding: 2rem;
+        margin: 2rem;
+    }
+
+    /* Font */
+
+    .table-title {
+        font-size: 2.5rem;
+    }
+    
+    .table-text {
+        font-size: 1.6rem;
+    }
+    
+    .table-value {
+        font-size: 1.6rem;
+    }
+    
+    .table-footnote {
+        font-size: 1.2rem;
+    }
+
+}
+
